@@ -1,0 +1,12 @@
+{
+  "name": "UNSHARED",
+  "short_name": "UNSHARED",
+  "description": "在多伦多机房为企业客户搭建并运行维护独享的 macOS 人工智能开发与接口验证环境：全新 Mac mini / Mac Studio 物理机，一台只给一位客户，含固定公网地址、完整 macOS 管理员权限、1 年 AppleCare+ 与 UPS 备电。连续在网 15 个月后整台机器归客户所有。价格以加元（CA$）计。",
+  "start_url": "./",
+  "scope": "./",
+  "lang": "zh-CN",
+  "display": "browser",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "icons": []
+}

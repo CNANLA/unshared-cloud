@@ -1,0 +1,111 @@
+/* UNSHARED visual skin v8
+   Visual treatment only. The original page structure, section order, spacing,
+   responsive layout and interaction markup remain unchanged. */
+
+:root{
+  --u-bg:#07090c;
+  --u-bg-soft:#0b0f14;
+  --u-panel:#10151c;
+  --u-panel-raised:#151b23;
+  --u-text:#f2f4f6;
+  --u-muted:#9ca5b0;
+  --u-line:#2b333e;
+  --u-line-strong:#596575;
+  --u-silver:#dfe5ec;
+  --u-focus:#9bc5ff;
+}
+
+html{background:var(--u-bg);color-scheme:dark}
+body{color:var(--u-text);background:var(--u-bg)}
+.home-page>div,.inner-page>div{font-family:"Space Grotesk","Noto Sans SC","Segoe UI",sans-serif!important;color:var(--u-text)!important;background:var(--u-bg)!important}
+::selection{color:#071019;background:#e3e9ef}
+
+/* Header and navigation */
+.site-header{background:#090c10!important;border-color:var(--u-line)!important;box-shadow:0 1px 0 rgba(255,255,255,.035)}
+.brand-logo,.footer-brand-logo{filter:invert(1) grayscale(1) brightness(1.25);mix-blend-mode:screen}
+.nav-links a,.lang a,.lang span,.m-link{color:#a9b1bc!important}
+.nav-links a:hover,.lang a:hover,.m-link:hover,.nav-links a[aria-current=page],.lang a[aria-current=true],.m-link[aria-current=page]{color:#fff!important}
+.nav-links a[aria-current=page]:not(.btn){text-shadow:0 0 16px rgba(191,217,248,.32)}
+.burger{color:#edf1f5!important;background:#10151b!important;border-color:#424d5a!important}
+.m-menu{background:#090c10!important;border-color:var(--u-line)!important;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+
+/* Type and labels */
+h1,h2,h3,strong{color:var(--u-text)!important}
+h1,h2{letter-spacing:-.035em;text-wrap:balance}
+.mut{color:var(--u-muted)!important}
+.mono{color:#929daa!important}
+.lbl{color:#a9b5c2!important;border-color:#546171!important;background:#0d1218!important;letter-spacing:.07em}
+
+/* Primary controls */
+.btn,.btn-o{color:#081019!important;background:linear-gradient(180deg,#f7f8f9,#d4dbe2)!important;border-color:#f4f6f8!important;border-radius:4px!important;box-shadow:0 5px 18px rgba(0,0,0,.2);letter-spacing:.015em}
+.btn:hover,.btn-o:hover{color:#03070b!important;background:#fff!important;box-shadow:0 0 0 1px rgba(255,255,255,.2),0 9px 25px rgba(128,170,222,.18)}
+.btn:focus-visible,.btn-o:focus-visible,.opt:focus-visible,.seg:focus-visible,.burger:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:2px solid var(--u-focus)!important;outline-offset:3px}
+
+.opt,.seg{color:#b6bec8!important;background:#0d1218!important;border-color:#3a4552!important;border-radius:3px!important}
+.opt:hover,.seg:hover{color:#fff!important;background:#141a22!important;border-color:#748193!important}
+.opt.on,.seg.on{color:#081019!important;background:linear-gradient(180deg,#eef2f5,#cbd4dd)!important;border-color:#e9edf1!important;box-shadow:none!important}
+.sub{color:#7d8896!important}
+
+/* Sections and components — targeted selectors only. */
+main>section,main>.wrap,main>div.wrap,.row,.step,details{border-color:var(--u-line)!important}
+.sec{background:#0a0d11!important;border-color:var(--u-line)!important}
+.sec:nth-of-type(even){background:#080b0f!important}
+.card,.mcard,.doc,.note{color:var(--u-text)!important;background:var(--u-panel)!important;border-color:#333d49!important;border-radius:4px!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+.card:hover,.mcard:hover{border-color:#505d6d!important}
+.mcard.sel{border-color:#aeb9c5!important;box-shadow:0 0 0 1px rgba(224,232,240,.08)!important}
+.mcard.sel>.mono:first-child{color:#081019!important;background:#e4e9ee!important}
+
+table{color:#c8ced6!important}
+th{color:#f0f3f6!important;background:#11171e!important;border-color:#333c47!important}
+td{border-color:#2b333d!important}
+tbody tr:hover{background:rgba(153,184,221,.045)}
+summary{color:#eff2f5!important}
+
+input,textarea,select,.field input,.field textarea,.field select{color:#f0f3f6!important;background:#090d12!important;border-color:#36414e!important;border-radius:3px!important;box-shadow:inset 0 1px 6px rgba(0,0,0,.2)}
+input::placeholder,textarea::placeholder{color:#687482!important}
+.chk{accent-color:#dfe6ed}
+
+/* Homepage: use the existing media stage, without the old 3D layer. */
+#hero-stage{background-image:linear-gradient(90deg,rgba(5,8,11,.52),rgba(5,8,11,.06) 55%,rgba(5,8,11,.34)),url("./unshared-hero-rack-macmini.jpg")!important;background-size:cover!important;background-position:center!important;box-shadow:inset 0 -90px 95px rgba(5,8,11,.55),inset 0 0 0 1px rgba(255,255,255,.025)}
+#hero-stage canvas{visibility:hidden!important}
+#quick-quote{background:#10151c!important;border-color:#384351!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.025)}
+
+/* Inner-page introductions: photography stays secondary to readable copy. */
+.page-about main>.hero{background-image:linear-gradient(90deg,#080b0f 0%,#080b0f 48%,rgba(8,11,15,.9) 66%,rgba(8,11,15,.34)),url("./unshared-about-datacenter-v2.jpg")!important;background-size:auto,58% auto!important;background-position:0 0,right center!important;background-repeat:no-repeat!important}
+.page-pricing main>.hero{background-image:linear-gradient(90deg,#080b0f 0%,#080b0f 54%,rgba(8,11,15,.91) 69%,rgba(8,11,15,.38)),url("./unshared-pricing-lineup-v2.jpg")!important;background-size:auto,54% auto!important;background-position:0 0,right center!important;background-repeat:no-repeat!important}
+.page-contact main>.hero{background-image:linear-gradient(90deg,#080b0f 0%,#080b0f 54%,rgba(8,11,15,.91) 70%,rgba(8,11,15,.42)),url("./unshared-contact-operations-v2.jpg")!important;background-size:auto,52% auto!important;background-position:0 0,right center!important;background-repeat:no-repeat!important}
+.page-policy main>.hero{background-image:linear-gradient(90deg,#080b0f 0%,#080b0f 56%,rgba(8,11,15,.92) 72%,rgba(8,11,15,.42)),url("./unshared-policy-security-v2.jpg")!important;background-size:auto,50% auto!important;background-position:0 0,right center!important;background-repeat:no-repeat!important}
+
+/* Existing image slots get new imagery; their boxes and dimensions are retained. */
+.fig-box{background-image:linear-gradient(rgba(6,9,13,.08),rgba(6,9,13,.28)),url("./unshared-about-datacenter-v2.jpg")!important;background-size:cover!important;background-position:center!important;border-color:#465362!important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.03)}
+.fig-box>img{visibility:hidden!important}
+.page-pricing .mcard>div:has(>img[src*="machine-mini"]),.page-pricing div:has(>#sum-img[src*="machine-mini"]){background-color:#05080b!important;background-image:url("./unshared-product-rack-macmini-v2.jpg")!important;background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important;border-color:#46515e!important}
+.page-pricing .mcard>div>img[src*="machine-mini"],#sum-img[src*="machine-mini"]{visibility:hidden!important}
+.page-pricing .mcard>div:has(>img[src*="machine-studio"]),.page-pricing div:has(>#sum-img[src*="machine-studio"]){background-color:#05080b!important;background-image:url("./unshared-product-rack-macstudio-v1.jpg")!important;background-size:contain!important;background-position:center!important;background-repeat:no-repeat!important;border-color:#46515e!important}
+.page-pricing .mcard>div>img[src*="machine-studio"],#sum-img[src*="machine-studio"]{visibility:hidden!important}
+
+/* Keep original functional diagrams legible but visually consistent. */
+img[src$=".svg"]{filter:grayscale(1) brightness(1.25) contrast(.92)}
+.home-page img[src$="ui-access.svg"]{content:url("./home-admin-access-v1.jpg");aspect-ratio:922/602;object-fit:cover!important;filter:none!important;border:1px solid #35404c;border-radius:4px}
+.home-page img[src$="ui-network.svg"]{content:url("./home-network-v1.jpg");aspect-ratio:922/602;object-fit:cover!important;filter:none!important;border:1px solid #35404c;border-radius:4px}
+.home-page img[src$="ui-ownership.svg"]{content:url("./home-ownership-v1.jpg");aspect-ratio:922/602;object-fit:cover!important;filter:none!important;border:1px solid #35404c;border-radius:4px}
+.home-page img[src$="illus-rack.svg"]{content:url("./home-rack-v1.jpg");aspect-ratio:476/238;object-fit:cover!important;filter:none!important;border:1px solid #35404c;border-radius:4px}
+.page-about img[src$="node-15.svg"]{content:url("./about-node-15-v1.jpg");object-fit:cover!important;filter:none!important}
+.page-about img[src$="node-30.svg"]{content:url("./about-node-30-v1.jpg");object-fit:cover!important;filter:none!important}
+.page-about img[src$="node-80.svg"]{content:url("./about-node-80-v1.jpg");object-fit:cover!important;filter:none!important}
+.spy-link{color:#9aa5b2!important}
+.spy-link:hover,.spy-link[aria-current=true]{color:#fff!important}
+#spy-bar{background:#dce3ea!important;box-shadow:0 0 10px rgba(164,199,239,.32)}
+
+footer{color:#909aa7!important;background:#07090c!important;border-color:var(--u-line)!important}
+footer a{color:#c8cfd7!important}
+
+@media (max-width:860px){
+  .page-about main>.hero,.page-pricing main>.hero,.page-contact main>.hero,.page-policy main>.hero{background-size:cover!important;background-position:center!important}
+  .page-about main>.hero{background-image:linear-gradient(rgba(6,9,13,.88),rgba(6,9,13,.94)),url("./unshared-about-datacenter-v2.jpg")!important}
+  .page-pricing main>.hero{background-image:linear-gradient(rgba(6,9,13,.88),rgba(6,9,13,.94)),url("./unshared-pricing-lineup-v2.jpg")!important}
+  .page-contact main>.hero{background-image:linear-gradient(rgba(6,9,13,.88),rgba(6,9,13,.94)),url("./unshared-contact-operations-v2.jpg")!important}
+  .page-policy main>.hero{background-image:linear-gradient(rgba(6,9,13,.9),rgba(6,9,13,.95)),url("./unshared-policy-security-v2.jpg")!important}
+}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
